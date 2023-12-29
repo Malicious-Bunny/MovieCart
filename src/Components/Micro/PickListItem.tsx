@@ -52,7 +52,7 @@ export default function PickListItem(){
     useEffect(()=>{
         const randomeTitle : string = allTitles[Math.floor(Math.random() * allTitles.length)].title.join('+');
         async function getPoster(){
-            const poster : string = 'http://www.omdbapi.com/?apikey=3a1eedab&t='+randomeTitle+'';
+            const poster : string = 'https://www.omdbapi.com/?apikey=3a1eedab&t='+randomeTitle+'';
             const data = await fetch(poster);
 
             return data;
@@ -99,7 +99,7 @@ export default function PickListItem(){
                     <div className="flex flex-row content-center justify-start gap-2 ">
                         {
                             genres.map((genre)=>{
-                                return <span className="pr-2 text-sm text-gray-900 border-r rounded-sm md:lg:xl:text-xl hover:cursor-pointer hover:font-extrabold dark:text-white last:border-r-none border-r-black w-max text-ellipsis">{genre}</span>
+                                return <span className="pr-2 text-sm text-gray-900 border-r rounded-sm md:lg:xl:text-xl hover:cursor-pointer hover:font-extrabold dark:text-white last:border-r-none w-max text-ellipsis">{genre}</span>
                             })
                         }
                     </div>

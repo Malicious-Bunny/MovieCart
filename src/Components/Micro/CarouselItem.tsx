@@ -15,7 +15,7 @@ export default function CarouselItem({movieTitle}: Props){
     useEffect(()=>{
         
         async function getPoster(){
-            const poster : string = 'http://www.omdbapi.com/?apikey=3a1eedab&t='+movieTitle+'';
+            const poster : string = 'https://www.omdbapi.com/?apikey=3a1eedab&t='+movieTitle+'';
             const data = await fetch(poster);
 
             return data;

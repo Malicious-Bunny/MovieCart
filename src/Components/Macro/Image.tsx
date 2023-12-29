@@ -12,7 +12,7 @@ export default function Image(){
          const randomMovie : Movie = Titles[Math.floor(Math.random()*Titles.length)];
         const movieTitle : string = randomMovie.title.join('+');
         async function getPoster(){
-            const poster : string = 'http://www.omdbapi.com/?apikey=3a1eedab&t='+movieTitle+'';
+            const poster : string = 'https://www.omdbapi.com/?apikey=3a1eedab&t='+movieTitle+'';
             const res = await fetch(poster);
             const data = await res.json();
 
@@ -58,7 +58,7 @@ export default function Image(){
         
                             <p className="text-3xl md:lg:text-7xl first-letter:text-xl ">{price}</p>
         
-                            <p className='font-bold border  w-max'>{`Rated ${AgeRestriction}`}</p>
+                            <p className='font-bold border w-max'>{`Rated ${AgeRestriction}`}</p>
         
         
                             <div className=" w-max h-max"><button className='border-2 backdrop-grayscale transition-transform hover:scale-110 rounded-md mt-14 p-4 w-[13rem] hover:filter'><strong>Add to cart</strong></button></div>
