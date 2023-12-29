@@ -21,7 +21,7 @@ export default function Header() {
         document.documentElement.classList.add('dark')
     }
 
-    const [lightDark, setLightDark] = useState<string>('light');
+    const [lightDark, setLightDark] = useState<string>('dark');
     const [menu, setMenu] = useState<boolean>(false);
 
 
