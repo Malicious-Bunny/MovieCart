@@ -54,7 +54,7 @@ export default function PreviewPage(){
 
     useEffect(()=>{
         async function getMovieInfo(){
-            const poster : string = `http://www.omdbapi.com/?apikey=3a1eedab&i=${name}&plot=full`;
+            const poster : string = `https://www.omdbapi.com/?apikey=3a1eedab&i=${name}&plot=full`;
 
             const response = await fetch(poster,{
                 mode : 'cors',
